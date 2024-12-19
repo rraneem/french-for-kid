@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprendre l'Alphabet Français pour Enfants</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #a37d7d;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #cac5c2;
+        }
+        .alphabet-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .letter-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 60px;
+            padding: 10px;
+            border: 2px solid #ff6600;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+        }
+        .letter-item:hover {
+            transform: scale(1.2);
+            background-color: #ffeb3b;
+        }
+        .letter-item img {
+            width: 50px;
+            height: 50px;
+        }
+        .letter-item p {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        /* footer section*/
+
+.footer_section {
+  background-color: #082465;
+  padding: 20px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer_section p {
+  color: #fdfdfe;
+  margin: 0;
+  text-align: center;
+}
+
+.footer_section a {
+  color: #fdfdfe;
+}
+
+/* end footer section*/
+        @keyframes backgroundAnimation {
+            0% { background-color: #ffccbc; }
+            25% { background-color: #ffab91; }
+            50% { background-color: #ff8a65; }
+            75% { background-color: #ff7043; }
+            100% { background-color: #ff5722; }
+        }
+        body {
+            animation: backgroundAnimation 15s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue à l'Apprentissage de l'Alphabet Français pour Enfants!</h1>
+        <div class="alphabet-container">
+            <div class="letter-item" onclick="playSound('A')">
+                <img src="images/A.avif" alt="A">
+                <p>A</p>
+            </div>
+            <div class="letter-item" onclick="playSound('B')">
+                <img src="images/B.avif" alt="B">
+                <p>B</p>
+            </div>
+            <div class="letter-item" onclick="playSound('C')">
+                <img src="images/c.avif" alt="C">
+                <p>C</p>
+            </div>
+            <div class="letter-item" onclick="playSound('D')">
+                <img src="images/d.avif" alt="D">
+                <p>D</p>
+            </div>
+            <div class="letter-item" onclick="playSound('E')">
+                <img src="images/e.avif" alt="E">
+                <p>E</p>
+            </div>
+            <div class="letter-item" onclick="playSound('F')">
+                <img src="images/f.avif" alt="F">
+                <p>F</p>
+            </div>
+            <div class="letter-item" onclick="playSound('G')">
+                <img src="images/g.avif" alt="G">
+                <p>G</p>
+            </div>
+            <div class="letter-item" onclick="playSound('H')">
+                <img src="images/h.avif" alt="H">
+                <p>H</p>
+            </div>
+            <div class="letter-item" onclick="playSound('I')">
+                <img src="images/i.avif" alt="I">
+                <p>I</p>
+            </div>
+            <div class="letter-item" onclick="playSound('J')">
+                <img src="images/j.avif" alt="J">
+                <p>J</p>
+            </div>
+            <div class="letter-item" onclick="playSound('K')">
+                <img src="images/k.avif" alt="K">
+                <p>K</p>
+            </div>
+            <div class="letter-item" onclick="playSound('L')">
+                <img src="images/l.avif" alt="L">
+                <p>L</p>
+            </div>
+            <div class="letter-item" onclick="playSound('M')">
+                <img src="images/m.avif" alt="M">
+                <p>M</p>
+            </div>
+            <div class="letter-item" onclick="playSound('N')">
+                <img src="images/n.avif" alt="N">
+                <p>N</p>
+            </div>
+            <div class="letter-item" onclick="playSound('O')">
+                <img src="images/o.avif" alt="O">
+                <p>O</p>
+            </div>
+            <div class="letter-item" onclick="playSound('P')">
+                <img src="images/p.avif" alt="P">
+                <p>P</p>
+            </div>
+            <div class="letter-item" onclick="playSound('Q')">
+                <img src="images/q.avif" alt="Q">
+                <p>Q</p>
+            </div>
+            <div class="letter-item" onclick="playSound('R')">
+                <img src="images/r.avif" alt="R">
+                <p>R</p>
+            </div>
+            <div class="letter-item" onclick="playSound('S')">
+                <img src="images/s.avif" alt="S">
+                <p>S</p>
+            </div>
+            <div class="letter-item" onclick="playSound('T')">
+                <img src="images/t.avif" alt="T">
+                <p>T</p>
+            </div>
+            <div class="letter-item" onclick="playSound('U')">
+                <img src="images/u.avif" alt="U">
+                <p>U</p>
+            </div>
+            <div class="letter-item" onclick="playSound('V')">
+                <img src="images/v.avif" alt="V">
+                <p>V</p>
+            </div>
+            <div class="letter-item" onclick="playSound('W')">
+                <img src="images/w.avif" alt="W">
+                <p>W</p>
+            </div>
+            <div class="letter-item" onclick="playSound('X')">
+                <img src="images/x.avif" alt="X">
+                <p>X</p>
+            </div>
+            <div class="letter-item" onclick="playSound('Y')">
+                <img src="images/y.avif" alt="Y">
+                <p>Y</p>
+            </div>
+            <div class="letter-item" onclick="playSound('Z')">
+                <img src="images/z.avif" alt="Z">
+                <p>Z</p>
+            </div>
+        </div>
+    </div>
+    <audio id="A-sound" src="sounds/A.mp3"></audio>
+    <audio id="B-sound" src="sounds/B.mp3"></audio>
+    <audio id="C-sound" src="sounds/C.mp3"></audio>
+    <audio id="D-sound" src="sounds/D.mp3"></audio>
+    <audio id="E-sound" src="sounds/E.mp3"></audio>
+    <audio id="F-sound" src="sounds/F.mp3"></audio>
+    <audio id="G-sound" src="sounds/G.mp3"></audio>
+    <audio id="H-sound" src="sounds/H.mp3"></audio>
+    <audio id="I-sound" src="sounds/I.mp3"></audio>
+    <audio id="J-sound" src="sounds/J.mp3"></audio>
+    <audio id="K-sound" src="sounds/K.mp3"></audio>
+    <audio id="L-sound" src="sounds/L.mp3"></audio>
+    <audio id="M-sound" src="sounds/M.mp3"></audio>
+    <audio id="N-sound" src="sounds/N.mp3"></audio>
+    <audio id="O-sound" src="sounds/O.mp3"></audio>
+    <audio id="P-sound" src="sounds/P.mp3"></audio>
+    <audio id="Q-sound" src="sounds/Q.mp3"></audio>
+    <audio id="R-sound" src="sounds/R.mp3"></audio>
+    <audio id="S-sound" src="sounds/S.mp3"></audio>
+    <audio id="T-sound" src="sounds/T.mp3"></audio>
+    <audio id="U-sound" src="sounds/U.mp3"></audio>
+    <audio id="V-sound" src="sounds/V.mp3"></audio>
+    <audio id="W-sound" src="sounds/W.mp3"></audio>
+    <audio id="X-sound" src="sounds/X.mp3"></audio>
+    <div class="d-flex justify-content-center mt-5">
+        <a href="index.html" class="call_to-btn  ">
+		<span>
+            Go back
+          </span>
+          <img src="images/right-arrow.avif" alt="">
+        </a>
+      </div>
+        <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2024 All Rights Reserved By
+      <a href="index.html">IT Team at SVU</a>
+    </p>
+  </section>
+  <!-- footer section -->

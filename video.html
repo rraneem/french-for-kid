@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Kid's Learning French</title>
+
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #ff6600;
+        }
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+        .video-item {
+            background-color: #fff;
+            border: 2px solid #ff6600;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .video-item:hover {
+            transform: scale(1.05);
+        }
+        .video-item video {
+            width: 100%;
+            border-bottom: 2px solid #ff6600;
+        }
+        .title {
+            padding: 10px;
+            font-size: 1.2em;
+            color: #ff6600;
+        }
+        .search-bar {
+            margin: 20px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 80%;
+        }
+        .call_to-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  font-size: 15px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #769cb5;
+  border: 1px solid transparent;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+/* footer section*/
+
+.footer_section {
+  background-color: #082465;
+  padding: 20px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer_section p {
+  color: #fdfdfe;
+  margin: 0;
+  text-align: center;
+}
+
+.footer_section a {
+  color: #fdfdfe;
+}
+
+/* end footer section*/
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <h1>Welcome to the Kid's Video Gallery!</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for a video..." onkeyup="filterVideos()">
+        </div>
+        <div class="video-grid" id="video-grid">
+            <!-- Videos will be dynamically added here -->
+        </div>
+    </div>
+    <div class="d-flex justify-content-center mt-5">
+        <a href="index.html" class="call_to-btn  ">
+		<span>
+            Go back
+          </span>
+          <img src="images/right-arrow.avif" alt="">
+        </a>
+      </div>
+        <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2024 All Rights Reserved By
+      <a href="index.html">IT Team at SVU</a>
+    </p>
+  </section>
+  <!-- footer section -->
+    <script>   
+        const videos = [
+            { title: "Educational Video/ Learn colors ", src: "media/colors.mp4" },
+            { title: "Educational Videoow to count/ Learn  ", src: "media/count.mp4" },
+            { title: "Educational Video ", src: "media/book.mp4" },
+            { title: "Cartoon Video/ Learn how to count", src: "media/count3.mp4" },
+			{ title: "Cartoon Video/Learn how to count", src: "media/count2.mp4" },
+            // Add more video objects as needed
+        ];
+
+        function createVideoItem(video) {
+            return `
+                <div class="video-item">
+                    <video controls>
+                        <source src="${video.src}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="title">${video.title}</div>
+                </div>
+            `;
+        }
+
+        function loadVideos() {
+            const videoGrid = document.getElementById('video-grid');
+            videoGrid.innerHTML = videos.map(createVideoItem).join('');
+        }
+
+        function filterVideos() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            const filteredVideos = videos.filter(video => video.title.toLowerCase().includes(searchInput));
+            const videoGrid = document.getElementById('video-grid');
+            videoGrid.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                videoGrid.innerHTML = filteredVideos.map(createVideoItem).join('');
+                videoGrid.style.transform = 'scale(1)';
+            }, 200);
+        }
+
+        window.onload = loadVideos;
+    </script>
+</body>
+</html>

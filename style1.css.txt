@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn French for Kids</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue à Apprendre le Français</h1>
+        <p>Amusez-vous en apprenant de nouveaux mots en français!</p>
+    </header>
+    <main>
+        <section class="lesson">
+            <h2>Les Animaux</h2>
+            <div class="word-card" onclick="playAudio('cat')">
+                <img src="cat.jpg" alt="Cat">
+                <p>Chat</p>
+            </div>
+            <div class="word-card" onclick="playAudio('dog')">
+                <img src="dog.jpg" alt="Dog">
+                <p>Chien</p>
+            </div>
+            <!-- Add more words as needed -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Learn French for Kids</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
